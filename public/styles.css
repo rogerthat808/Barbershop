@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(30, 24, 22, 0.915);
+    background-color: rgba(12, 12, 12, 0.955);
 
 }
 
@@ -8,6 +8,7 @@ body {
     display: flex;
     height: 40px;
     border-radius: 10px;
+    margin-top: 15px;
 }
 
 .navBarBox {
@@ -49,7 +50,7 @@ a {
 }
 
 
-img {
+.front-images {
     height: 230px;
 }
 
@@ -166,4 +167,49 @@ button {
     width: 250px;
     border-radius: 30px;
     margin-top: 40px;
+}
+
+/* Gallery starts right here */
+
+.gallery {
+    width: 1200px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img {
+    height: 240px;
+    filter:grayscale(100%);
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+#backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.2);
 }
