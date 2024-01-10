@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navBar">
-        <a href="/links/gallery.html" id="galleryLink">Gallery</a>
+        <img class="logo-2" src="/images/logo-2.png">
         <div class="navBarBox">
             <a href="/index.html" id="homeLink">Home</a>
             <a href="/links/about.html" id="aboutLink">About us</a>
@@ -19,26 +19,83 @@
     </div>
 
     <div class="imgContainer">
-        <span><img class="front-images" src="/images/img-1.jpeg"></span>
-        <span><img class="front-images" src="/images/img-2.jpeg"></span>
-        <span><img class="front-images" src="/images/img-3.jpeg"></span>
+        <div class="gallery-wrap">
+            <img src="/images/back.png" id="backBtn">
+            <div class="gallery">
+                <div>
+                    <span><img src="/images/img-1.jpeg"></span>
+                    <span><img src="/images/img-2.jpeg"></span>
+                    <span><img src="/images/img-3.jpeg"></span>
+                </div>
+                <div>
+                    <span><img src="/images/img-1.jpeg"></span>
+                    <span><img src="/images/img-2.jpeg"></span>
+                    <span><img src="/images/img-3.jpeg"></span>
+                </div>
+            </div>
+            <img src="/images/next.png" id="nextBtn">
+        </div>
     </div>
 
-    <div class="name">Higher 6</div>
-
+    <div class="name"><img class="logo" src="/images/logo.png"></div>
+    <div class="our-barbers">Our Barbers</div>
     <div class="aboutUs">
         <div class="aboutJohnny">
             <h3>Johhny</h3>
             <img id="seblorImg" src="/images/seblor.jpeg">
             <p class="paragraph-j">A barber whose journey is a fusion of urban vibes and the laid-back essence of San Diego. Shaped by the city's vibrant culture and rooted in a family legacy, he blends classic techniques, crafting haircuts that echo the breezy spirit of this sunny paradise.</p>
         </div>
-        <div class="or">Or</div>
         <div class="aboutCisco">
             <h3>Cisco</h3>
-            <img class="ciscoImg" src="/images/ciscoImg.jpeg">
+            <img id="ciscoImg" src="/images/ciscoImg.jpeg">
             <p class="paragraph-c">Meet a barber whose roots in an urban upbringing and family legacy shaped his journey. Blending tradition with contemporary flair, he crafts hairstyles that echo narratives of his upbringing and unwavering dedication to the art of barbering.</p>
         </div>
     </div>
-
+    <div class="story">
+        <div class="our-story">Our Story</div>
+        <div class="story-text">
+            <p>
+In the heart of San Diego, Johnny and Cisco, lifelong buddies with a passion for sharp style, forged a path in the rugged world of barbershops. Fueled by the city's vibrant energy, their joint venture became a go-to destination for sleek haircuts, embodying a sense of grit and camaraderie. Through the highs and lows, Johnny and Cisco's friendship solidified, proving that real men can turn dreams into a bold and successful reality in the world of grooming.
+            </p>
+        </div>
+    </div>
 </body>
+<footer>
+    <div id="footer-container">
+        <div class="contact">
+            <h1>Contact</h2>
+            <p>Higher 6</p>
+            <p>12004 Caramel Mountain Rd Ste. 44</p>
+            <p>San Diego, CA 92128</p>
+
+            <p>Tel 858-123-4567</p>
+            <p>Email info@mystyle.com</p>
+        </div>
+        <div class="social-media">
+            <h1 id="social-title">Social Media</h1>
+            <div class="social-container">
+                <div class="facebook">
+                    <a href="www.facebook.com"><img class="facebook" src="/images/facebook.png"></a>
+                </div>
+                <div class="instagram">
+                    <a href="www.instagram.com"><img class="instagram" src="/images/instagram.png"></a>
+                </div>
+                <div class="twitter">
+                    <a href="www.twitter.com"><img class="twitter" src="/images/twitter.png"></a>
+                </div>
+                <div class="tiktok">
+                    <a href="www.tiktok.com"><img class="tiktok" src="/images/tiktok.png"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subscribe">
+            <div class="offers">Subscribe for offers</div>
+            <div class="subscribe-bar">
+                <input type="text" placeholder="Enter your email here">
+                <button id="joinBtn">Join</button>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

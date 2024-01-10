@@ -1,39 +1,45 @@
 body {
-    background-color: rgba(12, 12, 12, 0.955);
+    background-color: rgba(0, 0, 0, 0.951);
 
 }
 
 .navBar {
-    background-color: rgb(253, 214, 163);
     display: flex;
     height: 40px;
     border-radius: 10px;
     margin-top: 15px;
 }
 
-.navBarBox {
-    display: flex;
-    margin-left: 79%;
-    margin-top: 10px;
-    justify-content: space-around;
-    gap: 40px;
+.logo {
+    border-radius: 30px;
+    width: 400px;
+    height: 400px;
 }
 
-#galleryLink {
-    margin-left: 1%;
+.logo-2 {
+    height: 80px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 20px rgba(133, 131, 131, 0.175);
+}
+
+.navBarBox {
+    display: flex;
+    margin-left: 70%;
     margin-top: 10px;
+    justify-content: space-around;
+    gap: 90px;
 }
 
 a {
     font-size: 15px;
-    color: rgb(66, 66, 66);
+    color: rgb(204, 204, 204);
 }
 
 .imgContainer {
-    background-color: azure;
     height: 300px;
-    width: 90%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 80px auto;
+    margin-bottom: -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -67,14 +73,7 @@ a {
     justify-content: center;
     justify-content:space-around;
     gap: 0px;
-    margin-top: 30px;
-}
-
-.or {
-    font-size: 30px;
-    font-family: cursive;
-    margin-top: 8%;
-    color: aliceblue;
+    margin-top: 80px;
 }
 
 .aboutJohnny {
@@ -84,11 +83,21 @@ a {
     border-radius: 10px;
 }
 
+.aboutJohnny:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 .aboutCisco {
     background-color: aliceblue;
     height: 280px;
     width: 30%;
     border-radius: 10px;
+}
+
+.aboutCisco:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 h3 {
@@ -103,16 +112,6 @@ p {
     text-align: center;
 }
 
-button {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    background-color: bisque;
-    color: rgb(2, 2, 2);
-    border-radius: 10px;
-}
-
 #seblorImg {
     display: block;
     height: 100px;
@@ -120,25 +119,33 @@ button {
     border-radius: 60px;
 }
 
-.ciscoImg {
+#ciscoImg {
     display: block;
     height: 100px;
     margin: 0 auto;
     border-radius: 60px;
 }
 
+#seblorImg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
+#ciscoImg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 /* About  */
 
 .mapContainer {
     display: flex;
-    margin-top: 7.5%;
+    margin-top: 6%;
     margin-left: 10%;
 
 }
 
 .cardInfo {
-    background-color: rgba(142, 142, 142, 0.518);
+    background-color: rgba(255, 255, 255, 0.518);
     height: 250px;
     width: 250px;
     border-radius: 30px;
@@ -158,11 +165,12 @@ button {
 }
 
 #cardText {
+    margin-top: -5px;
     color: aliceblue;
 }
 
 .Office {
-    background-color: rgba(142, 142, 142, 0.518);
+    background-color: rgba(255, 255, 255, 0.518);
     height: 250px;
     width: 250px;
     border-radius: 30px;
@@ -172,7 +180,7 @@ button {
 /* Gallery starts right here */
 
 .gallery {
-    width: 1200px;
+    width: 1400px;
     display: flex;
     overflow-x: scroll;
 }
@@ -184,6 +192,7 @@ button {
     grid-gap: 20px;
     padding: 10px;
     flex: none;
+    margin-top: 40px;
 }
 
 .gallery div img {
@@ -199,17 +208,119 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10% auto;
+    margin: auto;
 }
 
 #backBtn, #nextBtn {
-    width: 50px;
+    width: 30px;
     cursor: pointer;
-    margin: 40px;
+    margin: 20px;
 }
 
 .gallery div img:hover {
     filter: grayscale(0);
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+/* footer starts here */
+
+footer {
+    margin-top: 150px;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(161, 161, 161, 0.657);
+}
+
+#footer-container {
+    display: flex;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h1, .social-media h1 {
+    font-family: cursive;
+}
+
+.social-media {
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+.social-container {
+    display: flex;
+}
+
+#social-title {
+    text-align: center;
+}
+
+.facebook, .instagram, .twitter, .tiktok {
+    height: 40px;
+    margin: 10px;
+    margin-top: -5px;
+}
+
+.tiktok {
+    border-radius: 12px;
+}
+
+.story {
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 150px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.our-story {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.story-text {
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.our-barbers {
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.subscribe {
+    margin-left: 250px;
+    margin-top: 100px;
+}
+
+input {
+    background-color: rgba(161, 161, 161, 0.657);
+    height: 40px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+input::placeholder {
+    color: black;
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+    height: 40px;
+    width: 60px;
+    border: 2px solid black;
+}
+
+.offers {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
