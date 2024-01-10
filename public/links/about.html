@@ -29,26 +29,49 @@
         <div>
             <div class="cardInfo">
                 <h3 id="card">Location :</h3>
-                <p id="cardText">123 random st Suite 420</p>
-                <p id="cardText">San Diego, CA 92122</p>
-                <p id="cardText">United States</p>
+                <p id="cardText">12004 Carmel Mountain Rd</p>
+                <p id="cardText">Suite 44</p>
+                <p id="cardText">San Diego, CA 92128</p>
             </div>
             <div class="Office">
-                <h3 id="card">Location :</h3>
-                <p id="cardText">123 random st Suite 420</p>
-                <p id="cardText">San Diego, CA 92122</p>
-                <p id="cardText">United States</p>
+                <h3 id="card">Info :</h3>
+                <p id="cardText">Monday - Sunday</p>
+                <p id="cardText">9 AM - 6 PM</p>
+                <p id="cardText">Appointments Only!</p>
             </div>
         </div>
         <div id="map"></div>
     </div>
+
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13);
+        const map = L.map('map').setView([32.98361, -117.07696], 17);
+        L.marker([32.98361, -117.07696]).addTo(map)
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+
+        navigator.geolocation.watchPosition(success, error);
+
+        function success(pos) {
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+            const accuracy = pos.coords.accuracy;
+
+            L.marker([lat, lng]).addTo(map)
+            L.circle([lat, lng], { radius: accuracy }).addTo(map);
+
+
+        }
+
+        function error() {
+            if(err.code === 1) {
+                alert("Please allow geolocation access")
+            } else {
+                alert("Cannot get current location")
+            }
+        }
     </script>
 </body>
 </html>

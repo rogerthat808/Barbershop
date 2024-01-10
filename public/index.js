@@ -1,26 +1,24 @@
-$('.bookJohnny').on('click', () => {
+$('.aboutJohnny').on('mouseenter', () => {
     const paragraph = $('.paragraph-j');
     const originalContent = paragraph.html();
 
     paragraph.empty();
-    paragraph.html('<h4>Call now: (619)-123-4567</h4>');
-    setTimeout(() => {
+    paragraph.html('<a href="https://app.thecut.co/barbers/jonnyselbor/" target="_blank">Book Here</a>');
+    $('.aboutJohnny').on('mouseleave', () => {
         paragraph.empty();
         paragraph.html(originalContent);
-    }, 5000); 
+    })
 });
 
-$('.bookCisco').on('click', () => {
+$('.aboutCisco').on('mouseenter', () => {
     const paragraph = $('.paragraph-c');
     const originalContent = paragraph.html();
 
     paragraph.empty();
-    paragraph.html('<h4>Call now: (858)-123-4567</h4>');
+    paragraph.html('<a href="https://app.thecut.co/barbers/franciscogutierrez/" target="_blank">Book Here</a>');
 
-    setTimeout(() => {
+    $('.aboutCisco').on('mouseleave', () => {
         paragraph.empty();
         paragraph.html(originalContent);
-    }, 5000); 
+    })
 });
-
-////////////////////// about 
