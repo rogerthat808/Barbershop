@@ -43,3 +43,38 @@ backBtn.addEventListener('click', () => {
     scrollContainer.style.scrollBehavior = "smooth";
     scrollContainer.scrollLeft -= 900;
 })
+
+
+
+
+// database 
+
+async function getClients() {
+    try {
+        let clients = await $.get('/clients')
+        clients.forEach(client => {
+            console.log(client)
+        });
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+let joinBtn = $("#joinBtn")
+
+joinBtn.on('click', postClient)
+
+async function postClient() {
+    try {
+        let emailInput = $(".emailInput").val()
+        let requestBody = { email: emailInput}
+
+        // should check if valid email
+
+        let newClient = await $.post('/clients', requestBody)
+        $(".emailInput").val('')
+        console.log('Client posted')
+    } catch (err) {
+        console.error(err)
+    }
+}
